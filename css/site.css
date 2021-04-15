@@ -200,7 +200,7 @@ code {
 #submitBtn {
     background-color: #17a2b8;
     color: #dbdfe7;
-    border-color: #dbdfe7;
+    border-color: #17a2b8;
 }
 
 .col-lg-4 .col-md-6 {
@@ -254,6 +254,7 @@ code {
 }
 
 .resultCol {
+    margin-top: 50px;
     box-sizing: content-box;
     padding-top: 20px;
 }
@@ -262,7 +263,8 @@ code {
     margin-top: 50px;
     color: darkgoldenrod;
     background-color: indigo;
-    border-color: #454d55;
+    border-color: red;
+    border: 1px solid;
 
 }
 
@@ -280,4 +282,17 @@ resultTable {
 
 tr>th {
     text-align: center;
+}
+
+.newNav {
+    color: white;
+    opacity: .5;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .5)
+}
+
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: #fff;
 }
