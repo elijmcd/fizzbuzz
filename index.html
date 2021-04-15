@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>FizzBuzz | Eli McDougal</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,61 +14,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 
 <body>
     <header>
-        <!-- <nav class="navbar navbar-expand-md fixed-top bg-dark shadow">
-            <a class="navbar-brand" href="/index2.html">Fizz/Buzz</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link newNav" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link newNav" href="index2.html">Index2 <span class="sr-only">(current)</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link newNav" href="/app.html">The App</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link newNav" href="/code.html">See the Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link newNav" href="#" target="_blank">Get the Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link newNav" href="//www.dougaldev.net" target="_blank">My Portfolio</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
+        <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
-            <a class="navbar-brand" href="/index.html">!Fizz/Buzz! </a>
+            <a class="navbar-brand" href="/index.html">!Fizz/Buzz!</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/app.html">The App</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="/code.html">See the Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="//github.com/elijmcd/Template" target="_blank">Get the
-                            Code</a>
+                        <a class="nav-link" href="//github.com/elijmcd/tacoTemplate" target="_blank">Get the Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="//www.dougaldev.net" target="_blank">My Portfolio</a>
@@ -76,45 +46,39 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
     <!-- Begin page content -->
     <main role="main" class="container">
         <div class="container-fluid">
-            <div class="row" id="title-row">
+            <div class="row">
                 <div class="col">
                     <h1>⚡!Fizz/Buzz!🍺</h1>
                 </div>
             </div>
-            <div class="row topRow">
-                <div class="col-6 card shadow">
-                    <form>
-                        <div class="form-group">
-                            <label>Number to Fizz : </label>
-                            <input type="number" id="numFizz" class="form-control" value=1>
-                            <label>Number to Buzz : </label>
-                            <input type="number" id="numBuzz" class="form-control" value=10>
-                        </div>
-                        <div class="form-group">
-                            <button id="submitBtn" type="button" class="form-control btn btn-info">Submit</button>
-                        </div>
-                    </form>
+            <div class="row">
+                <div class="col-lg-4 tacoboy">
+                    <img src="/img/fizzy.png" class="img-fluid p-2">
                 </div>
-            </div>
-            <div class="row bottomRow">
-                <div class="col card shadow" id="resultCol">
-                    <table class="table table-striped" id="resultTable">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th colspan="10">Results</th>
-                            </tr>
-                        </thead>
-                        <tbody id="resultBody">
-                            <!--Data gets pushed here-->
-                            <!-- tr's and td's after each 'for' loop-->
-                        </tbody>
-                    </table>
+                <div class="col-lg-4 intro card shadow">
+
+                    <p><b>Fizzbuzz</b> is an algorithm challenge that prints the numbers from 1 to 100, naming every
+                        multiple of 3 “Fizz", and every multiple of 5 “Buzz”.
+                        Numbers which are multiples of both "Fizz" and "Buzz" are called “FizzBuzz”.
+                        <b>!Fizz/Buzz!</b> allows the user to choose the "Fizz" and "Buzz" numbers, and to discover
+                        the many arcane patterns of "Fizz, "Buzz," & "FizzBuzz."
+                        <hr>
+                        Only a select few will find the treasured "FuzzBizz." Are you the one?
+                        <hr>
+                        Created using HTML, CSS, Bootstrap, & JavaScript.
+                        <br>
+                        <a id="fizzybuzzer" class="btn btn-info" href="/app.html" role="button">Let's Fizz and
+                            Buzz!</a>
+                        <!-- <button><a href="/app.html">Begin Palindrification</a></button> -->
+                    </p>
+                </div>
+                <div class="col-lg-4 kitty">
+                    <img src="/img/buzzy.png" class="img-fluid p-2">
                 </div>
             </div>
         </div>
@@ -122,20 +86,21 @@
 
     <footer class="footer">
         <div class="container">
-            <span>.FizzBuzz. | &copy; Eli McDougal | 2021</span>
+            <span>!Fizz/Buzz! | &copy; Eli McDougal | 2021</span>
         </div>
     </footer>
 
-    <template id="dataTemplate">
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </template>
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -146,11 +111,6 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="/js/example2.js"></script>
-    <!-- Button Events -->
-    <script>
-        document.getElementById("submitBtn").addEventListener("click", printNumbers);
     </script>
 </body>
 
