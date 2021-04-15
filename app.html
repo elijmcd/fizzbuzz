@@ -97,29 +97,59 @@
                             <input type="number" id="numBuzz" class="form-control" value=10>
                         </div>
                         <div class="form-group">
-                            <button id="submitBtn" type="button" class="form-control btn btn-info">Submit</button>
+                            <button id="submitBtn" type="button" data-toggle="modal" data-target="#myModal"
+                                class="form-control btn btn-info">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="row bottomRow">
-                <div class="col card shadow" id="resultCol">
-                    <table class="table table-striped" id="resultTable">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th colspan="10">Results</th>
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="rev-style" style="padding-top: .25rem">
+                                <table class="table table-striped responsive" style="overflow-x: auto;"
+                                    id="resultTable">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="10">Results</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="resultBody">
+                                        <!--Data gets pushed here-->
+                                        <!-- tr's and td's after each 'for' loop-->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <table>
+                                <script id="template-header" type="text/template">
+                                    <thead style="background-color: #6C6FE5">
+                                <tr><th colspan="5">Results</th></tr>
+                                </thead>
+                            </script>
+                            </table>
+                            <script id="template-row-items" type="text/template">
+                                <tr style="color: #000000; border: solid; border-color: #6C6FE5">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
-                        </thead>
-                        <tbody id="resultBody">
-                            <!--Data gets pushed here-->
-                            <!-- tr's and td's after each 'for' loop-->
-                        </tbody>
-                    </table>
+                        </script>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-
     <footer class="footer">
         <div class="container">
             <span>.FizzBuzz. | &copy; Eli McDougal | 2021</span>
@@ -150,7 +180,8 @@
     <script src="/js/site.js"></script>
     <!-- Button Events -->
     <script>
-        document.getElementById("submitBtn").addEventListener("click", printNumbers);
+        document.getElementById("submitBtn").addEventListener("click",
+            printNumbers);
     </script>
 </body>
 

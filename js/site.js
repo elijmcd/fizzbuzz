@@ -16,6 +16,11 @@ function fizzBuzz(fizzNum, buzzNum) {
         // let's fizz and buzz here
         if (i % fizzNum == 0 && i % buzzNum == 0) {
             numbers.push("!fZZbZZ!");
+            // if (i == 77) {
+            //     numbers.push("FUZZBIZZ");
+
+            //     return;
+            // }
         } else if (i % fizzNum == 0) {
             numbers.push("Fzz");
         } else if (i % buzzNum == 0) {
