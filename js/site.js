@@ -1,4 +1,4 @@
-//take user input and print numbers to the page
+//take user's input and prepare the results
 function printNumbers() {
     let fizz = parseInt(document.getElementById("numFizz").value);
     let buzz = parseInt(document.getElementById("numBuzz").value);
@@ -13,18 +13,16 @@ function fizzBuzz(fizzNum, buzzNum) {
     let numbers = [];
 
     for (let i = 1; i <= 100; i++) {
-        // let's fizz and buzz here
         if (i % fizzNum == 0 && i % buzzNum == 0) {
-            numbers.push("!fZZbZZ!");
-            // if (i == 77) {
-            //     numbers.push("FUZZBIZZ");
-
-            //     return;
-            // }
+            if (i == 77) {
+                numbers.push("!!F!ZZB!ZZ!!");
+                continue;
+            }
+            numbers.push("!fiZZbuZZ!");
         } else if (i % fizzNum == 0) {
-            numbers.push("Fzz");
+            numbers.push("Fizz");
         } else if (i % buzzNum == 0) {
-            numbers.push("Bzz");
+            numbers.push("Buzz");
         } else {
             numbers.push(i)
         }
@@ -32,41 +30,27 @@ function fizzBuzz(fizzNum, buzzNum) {
     return numbers;
 }
 
-
-
-//display the nums on the page
-
+//display the numbers on the modal
 function displayData(numbers) {
     const rowTemplate = document.getElementById("dataTemplate");
     const resultBody = document.getElementById("resultBody");
     let colCount = rowTemplate.content.cloneNode(true).querySelectorAll("td").length;
-    //ImportNode does same as clone, but import can get into a different doco than the one its on
 
     //clear the table
     resultBody.innerHTML = "";
 
-    //loop over every element in the array 'numbers'
-    //get the value and write it to the page
-    //first 'for' loops over rows
+    //outer 'for' loop runs over rows, returning cols to the template
     for (let rowIndex = 0; rowIndex < numbers.length; rowIndex += colCount) {
         let dataRow = rowTemplate.content.cloneNode(true);
-
-        //returns an array of cols from the template
         let cols = dataRow.querySelectorAll("td");
 
-        //inner 'for' loops over cols
+        //inner 'for' loop runs over cols
         for (let colIndex = 0; colIndex < cols.length; colIndex++) {
             let value = numbers[rowIndex + colIndex];
-            // if (typeof value === "undefined") {
-            //     value = "";
-            // } else if (value % 2 == 0) {
-            //     cols[colIndex].classList.add("boldIt")
-            // }
             //NOTE: td's use 'textContent' to set their content
             cols[colIndex].textContent = value;
         }
         //adds the row to the page
         resultBody.appendChild(dataRow);
     }
-
 }

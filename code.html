@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/site.css">
+    <link href="/css/prismDark.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -27,7 +29,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link " href="index.html">Home </a>
                     </li>
                     <li class="nav-item">
@@ -46,5 +48,105 @@
                 </ul>
             </div>
         </nav>
-
     </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col data line-numbers">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <pre><code class="language-js" id="codeBox">function reverseString() {
+//take user's input and prepare the results
+function printNumbers() {
+    let fizz = parseInt(document.getElementById("numFizz").value);
+    let buzz = parseInt(document.getElementById("numBuzz").value);
+
+    // declare variable 'fb' to store output 
+    let fb = fizzBuzz(fizz, buzz);
+    displayData(fb);
+}
+
+function fizzBuzz(fizzNum, buzzNum) {
+
+    let numbers = [];
+
+    for (let i = 1; i <= 100; i++) {
+        if (i % fizzNum == 0 && i % buzzNum == 0) {
+            if (i == 77) {
+                numbers.push("!!F!ZZB!ZZ!!");
+                continue;
+            }
+            numbers.push("!fiZZbuZZ!");
+        } else if (i % fizzNum == 0) {
+            numbers.push("Fizz");
+        } else if (i % buzzNum == 0) {
+            numbers.push("Buzz");
+        } else {
+            numbers.push(i)
+        }
+    }
+    return numbers;
+}
+
+//display the numbers on the modal
+function displayData(numbers) {
+    const rowTemplate = document.getElementById("dataTemplate");
+    const resultBody = document.getElementById("resultBody");
+    let colCount = rowTemplate.content.cloneNode(true).querySelectorAll("td").length;
+
+    //clear the table
+    resultBody.innerHTML = "";
+
+    //outer 'for' loop runs over rows, returning cols to the template
+    for (let rowIndex = 0; rowIndex < numbers.length; rowIndex += colCount) {
+        let dataRow = rowTemplate.content.cloneNode(true);
+        let cols = dataRow.querySelectorAll("td");
+
+        //inner 'for' loop runs over cols
+        for (let colIndex = 0; colIndex < cols.length; colIndex++) {
+            let value = numbers[rowIndex + colIndex];
+            //NOTE: td's use 'textContent' to set their content
+            cols[colIndex].textContent = value;
+        }
+        //adds the row to the page
+        resultBody.appendChild(dataRow);
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span>PalindromemordnilaP | &copy; Eli McDougal | 2021</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <!-- <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="/js/site.js"></script>
+    <script src="/js/prismDark.js"></script>
+</body>
+
+</html>

@@ -3,17 +3,14 @@ html {
     height: 100%;
 }
 
-.navbar .navbar-brand {
-    color: darkgoldenrod;
-}
-
-hr {
-    margin-top: 0;
-}
-
+html,
 body {
-    position: relative;
-    overflow: auto;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background: fixed;
+    background-attachment: fixed;
+    /* position: relative; */
+    /* overflow: auto; */
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     background: #355C7D;
@@ -24,33 +21,14 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* @media (min-width: 768px) {
-    .header {
-        background-image: url("/img/roboto.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: fixed;
-        background-color: darkgoldenrod;
-    }
+.navbar .navbar-brand {
+    color: darkgoldenrod;
+}
 
-    .hero {
-        margin: 0 auto;
-        overflow: hidden;
-        padding: 10px 0;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-} */
+hr {
+    margin-top: 0;
+}
 
-/* .hero {
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 10px 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-} */
 
 h1,
 h2 {
@@ -97,8 +75,13 @@ code {
     font-size: 80%;
 }
 
+pre {
+    max-height: 100%;
+}
+
 .card {
-    margin: 0;
+    margin-bottom: 100px;
+    margin-top: 0;
     padding-top: 20 px;
     background-color: darkgoldenrod;
     opacity: 0.8;
